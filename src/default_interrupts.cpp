@@ -10,6 +10,8 @@ extern std::uint32_t _bss;
 extern std::uint32_t _ebss;
 
 int main();
+extern "C" void __libc_init_array();
+//void __init_array_start();
 
 void __attribute__ ((interrupt)) reset_isr()
 {
@@ -35,6 +37,8 @@ void __attribute__ ((interrupt)) reset_isr()
    // Stack pointers?
 
    // Static constructors
+   __libc_init_array();
+//   __init_array_start();
 
    // Start
    // __extension__ allows non-pedantic code. In this case, getting the address of main.

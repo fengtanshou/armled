@@ -1,3 +1,5 @@
+/*ENTRY(_start)*/
+
 MEMORY
 {
 	FLASH (rx) : ORIGIN = 0x00000000, LENGTH = 0x00040000
@@ -15,6 +17,62 @@ SECTIONS
 		KEEP(*(.isr_vector))
 		*(.text*)
 	} >FLASH
+
+/*
+	. = ALIGN(4);
+*/
+
+	.init :
+	{
+		KEEP(*(.init))
+	} >FLASH
+
+	.fini :
+	{
+		KEEP(*(.fini))
+	} >FLASH
+
+/*
+	.preinit_array :
+	{
+		PROVIDE_HIDDEN(__preinit_array_start = .);
+		KEEP(*(.preinit_array*))
+		PROVIDE_HIDDEN(__preinit_array_end = .);
+	} >FLASH
+*/
+
+	.init_array :
+	{
+		PROVIDE_HIDDEN(__init_array_start = .);
+		KEEP(*(SORT(.init_array.*)))
+		KEEP(*(.init_array*))
+		PROVIDE_HIDDEN(__init_array_end = .);
+	} >FLASH
+
+	.fini_array :
+	{
+		PROVIDE_HIDDEN(__fini_array_start = .);
+		KEEP(*(SORT(.fini_array.*)))
+		KEEP(*(.fini_array*))
+		PROVIDE_HIDDEN(__fini_array_end = .);
+	} >FLASH
+
+	.ctors :
+	{
+		KEEP(*crtbegin.o(.ctors))
+		KEEP(*(EXCLUDE_FILE (*crtend.o) .ctors))
+		KEEP(*(SORT(.ctors.*)))
+		KEEP(*crtend.o(.ctors))
+	} >FLASH
+
+	.dtors :
+	{
+		KEEP(*crtbegin.o(.dtors))
+		KEEP(*(EXCLUDE_FILE (*crtend.o) .dtors))
+		KEEP(*(SORT(.dtors.*)))
+		KEEP(*crtend.o(.dtors))
+	} >FLASH
+
 
 	/* Exception tables, sorted for fast search (?) */
 	/* Maybe see: Exception Handling ABI for the ARM Architecture */
