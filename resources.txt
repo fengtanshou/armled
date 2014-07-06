@@ -1,0 +1,23 @@
+* TI Stellarisware (deprecated) and Tivaware. 
+* Building Bare-Metal ARM Systems with GNU, Miro Samek, Quantum Leaps, LLC. http://www.state-machine.com/arm/Building_bare-metal_ARM_with_GNU.pdf
+* https://github.com/thejpster/launchpad
+* http://processors.wiki.ti.com/index.php/Stellaris_Launchpad_with_OpenOCD_and_Linux
+* http://recursive-labs.com/blog/2012/10/28/stellaris-launchpad-gnu-linux-getting-started/
+* GNU default linker script: arm-none-eabi-ld --verbose
+* LD documentation: http://sourceware.org/binutils/docs/ld
+* man gcc
+* man ld
+
+* Tiva C Series TM4C123GH6PM Microcontroller Data Sheet (Rev. E)  (new name for LM4F120H5QR)
+* Erratas
+* Stellaris LM4F120 LaunchPad Evaluation Kit User's Manual (Rev. C)
+
+* Debugging tools:
+  * openocd (sudo or correct udev permissions - otherwise "load" fails (silently?))
+    * openocd -f  /usr/share/openocd/scripts/board/ek-lm4f120xl.cfg
+  * gdb bin/armled.axf
+    * target extended-remote:3333
+    * monitor reset halt, init
+    * load
+    * r, c, si
+  * objdump (-h, -t, -S)
