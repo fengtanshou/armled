@@ -7,6 +7,7 @@
 * LD documentation: http://sourceware.org/binutils/docs/ld
 * man gcc
 * man ld
+* avr-libc
 
 * Tiva C Series TM4C123GH6PM Microcontroller Data Sheet (Rev. E)  (new name for LM4F120H5QR)
 * Erratas

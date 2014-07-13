@@ -1,7 +1,6 @@
-#ifndef DEFAULT_INTERRUPTS
-#define DEFAULT_INTERRUPTS
+#ifndef DEFAULT_INTERRUPTS_H
+#define DEFAULT_INTERRUPTS_H
 
-void reset_isr();
-void blocking_isr();
+void reset_isr() __attribute__ ((interrupt));
 
 #endif

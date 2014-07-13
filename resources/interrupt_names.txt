@@ -1,0 +1,154 @@
+Reset
+Non-Maskable Interrupt
+Hard Fault
+Memory Management
+Bus Fault
+Usage Fault
+reserved
+reserved
+reserved
+reserved
+SVCall
+Debug Monitor
+reserved
+PendSV
+SysTick
+GPIO Port A
+GPIO Port B
+GPIO Port C
+GPIO Port D
+GPIO Port E
+UART0
+UART1
+SSI0
+I2C0
+PWM0 Fault
+PWM0 Generator 0
+PWM0 Generator 1
+PWM0 Generator 2
+QEI0
+ADC0 Sequence 0
+ADC0 Sequence 1
+ADC0 Sequence 2
+ADC0 Sequence 3
+Watchdog Timers 0 and 1
+16/32-Bit Timer 0A
+16/32-Bit Timer 0B
+16/32-Bit Timer 1A
+16/32-Bit Timer 1B
+16/32-Bit Timer 2A
+16/32-Bit Timer 2B
+Analog Comparator 0
+Analog Comparator 1
+Reserved
+System Control
+Flash Memory Control and EEPROM46
+GPIO Port F
+reserved
+reserved
+UART2
+SSI1
+16/32-Bit Timer 3A
+16/32-Bit Timer 3B
+I2C1
+QEI1
+CAN0
+CAN1
+reserved
+reserved
+Hibernation Module
+USB
+PWM Generator 3
+μDMA Software
+μDMA Error
+ADC1 Sequence 0
+ADC1 Sequence 1
+ADC1 Sequence 2
+ADC1 Sequence 3
+reserved
+reserved
+reserved
+reserved
+reserved
+SSI2
+SSI3
+UART3
+UART4
+UART5
+UART6
+UART7
+reserved
+reserved
+reserved
+reserved
+I2C2
+I2C3
+16/32-Bit Timer 4A
+16/32-Bit Timer 4B
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+16/32-Bit Timer 5A
+16/32-Bit Timer 5B
+32/64-Bit Timer 0A
+32/64-Bit Timer 0B
+32/64-Bit Timer 1A
+32/64-Bit Timer 1B
+32/64-Bit Timer 2A
+32/64-Bit Timer 2B
+32/64-Bit Timer 3A
+32/64-Bit Timer 3B
+32/64-Bit Timer 4A
+32/64-Bit Timer 4B
+32/64-Bit Timer 5A
+32/64-Bit Timer 5B
+System Exception (imprecise)
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+reserved
+PWM1 Generator 0
+PWM1 Generator 1
+PWM1 Generator 2
+PWM1 Generator 3
+PWM1 Fault

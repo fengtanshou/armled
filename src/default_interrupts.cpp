@@ -2,6 +2,8 @@
 #include <cstdint>
 #include <cstring>
 
+#include "interrupt.h"
+
 // memcpy and memset count calculation is dependent on the type
 extern std::uint8_t _data;
 extern std::uint8_t _edata;
@@ -14,7 +16,7 @@ int main();
 extern "C" void __libc_init_array();
 //void __init_array_start();
 
-void __attribute__ ((interrupt)) reset_isr()
+ISR(vector_reset)
 {
    // Copy .data to SRAM
    std::memcpy(&_data, &_data_load, &_edata - &_data);
@@ -33,11 +35,4 @@ void __attribute__ ((interrupt)) reset_isr()
    __extension__ main();
 
    // Exception if returning from start
-}
-
-void __attribute__ ((interrupt)) blocking_isr()
-{
-   while(true)
-   {
-   }
 }
